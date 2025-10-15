@@ -1,0 +1,25 @@
+# Pre-commit hooks configuration for Secrets Sentry
+#
+# To use this hook in your project:
+#
+# 1. Install pre-commit: pip install pre-commit
+# 2. Add to your .pre-commit-config.yaml:
+#
+#    repos:
+#      - repo: https://github.com/NodeSaint/SecretSentry
+#        rev: v1.1.0
+#        hooks:
+#          - id: secrets-sentry
+#
+# 3. Install the hook: pre-commit install
+# 4. Test it: pre-commit run --all-files
+
+- id: secrets-sentry
+  name: Secrets Sentry - Detect hardcoded secrets
+  description: Scan staged files for hardcoded secrets before commit
+  entry: python -m src.hooks.pre_commit
+  language: system
+  stages: [commit]
+  types: [text]
+  pass_filenames: false
+  always_run: true

@@ -1,0 +1,26 @@
+# Testing dependencies for Secrets Sentry
+
+# Core testing framework
+pytest>=7.4.0
+pytest-cov>=4.1.0          # Coverage plugin
+pytest-xdist>=3.3.0        # Parallel test execution
+pytest-timeout>=2.1.0      # Test timeout handling
+pytest-mock>=3.11.0        # Mocking utilities
+
+# Code quality and linting
+black>=23.7.0              # Code formatter
+flake8>=6.1.0              # Linting
+mypy>=1.5.0                # Type checking
+isort>=5.12.0              # Import sorting
+
+# Test utilities
+faker>=19.3.0              # Fake data generation
+hypothesis>=6.82.0         # Property-based testing
+freezegun>=1.2.2           # Time mocking
+
+# Coverage reporting
+coverage[toml]>=7.3.0
+
+# Optional: for better test reports
+pytest-html>=3.2.0         # HTML test reports
+pytest-json-report>=1.5.0  # JSON test reports
